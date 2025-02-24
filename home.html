@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Bootstrap HTML Template - Sports</title>
+	<meta name="description" content="A free responsive website template made exclusively for Frittt by Themesforce and Sarfraz Shaukat">
+	<meta name="keywords" content="website template, css3, one page, bootstrap, app template, web app, start-up">
+	<meta name="author" content="Themesforce and Sarfraz Shaukat for Frittt">
+	<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/all.css">
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="container">
+				<div class="logo"><a href="#"><img src="images/logo.png" alt="Sports"></a></div>
+				<nav id="nav">
+					<div class="opener-holder">
+						<a href="#" class="nav-opener"><span></span></a>
+						<ul>
+							<li class="active visible-sm visible-xs"><a href="home.html">Home</a></li>
+							<li><a href="Home.html">Home</a></li>
+							<li><a href="About.html">About</a></li>
+							<li><a href="Event.html">Event</a></li>
+							<li><a href="Teams.html">Teams</a></li>
+							<li><a href="Contact.html">Contact</a></li>
+						</ul>
+						<div class="drop-holder visible-sm visible-xs">
+							<span>Follow Us</span>
+							<ul class="social-networks">
+								<li><a class="fa fa-github" href="#"></a></li>
+								<li><a class="fa fa-twitter" href="#"></a></li>
+								<li><a class="fa fa-facebook" href="#"></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<section class="visual">
+			<div class="container">
+				<div class="text-block">
+					<div class="heading-holder">
+						<h1>Welcome To Sports Zone</h1>
+					</div>
+					<p class="tagline">Where Passion Meets Performance</p>
+				</div>
+			</div>
+			<img src="images/img-bg-01.jpg" alt="" class="bg-stretch">
+		</section>
+
+		<!-- New Section with Image and Information -->
+		</section>
+
+		<!-- College Event Section with Description and Image -->
+		<section class="college-event-section">
+			<div class="container">
+				<div class="row">
+					<!-- Left Side: College Description -->
+					<div class="col-md-6">
+						<div class="college-info-text">
+							<h2>About the College Hosting the Sports Event</h2>
+							<p>Kamala Institute of Technology and Science is a premier educational institution known for its commitment to academic excellence and physical fitness. With state-of-the-art sports facilities, we aim to foster talent, teamwork, and discipline among students. Our annual sports event brings together athletes from all disciplines to showcase their skills, fostering a spirit of healthy competition and camaraderie.</p>
+							<p>Join us as we celebrate sportsmanship and achievement, creating memories that will last a lifetime. Whether you're a participant or a spectator, the event promises an exciting and inspiring experience.</p>
+							<p>If you're passionate about sports and want to be part of our team,please contact us and send a message</p>
+						</div>
+					</div>
+
+					<!-- Right Side: College Image -->
+					<div class="col-md-6">
+						<div class="college-info-image">
+							<img src="images/indoor.jpg" alt="XYZ College Sports Event" class="img-responsive">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer Section -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>&copy; 2025 Sports Zone | All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div> <!-- End of wrapper -->
+</body>
+</html>
+<style>
+/* College Event Section Styles */
+.college-event-section {
+    background-color: #f4f4f4; /* Light background for the college event section */
+    padding: 60px 0; /* Padding for top and bottom */
+}
+
+.college-info-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.college-info-text p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.college-info-image img {
+    width: 100%; /* Make sure image takes full width */
+    border-radius: 8px; /* Add slight border radius for rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for a 3D effect */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 767px) {
+    .college-event-section .row {
+        flex-direction: column-reverse; /* Stack the content for mobile view */
+    }
+
+    .college-info-text h2 {
+        font-size: 28px;
+    }
+
+    .college-info-text p {
+        font-size: 14px;
+    }
+
+    .college-info-image img {
+        max-height: 250px; /* Limit image height on smaller screens */
+    }
+}
+
+/* Footer Section Styles */
+#footer {
+    background-color: #333; /* Dark background for the footer */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#footer p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+#footer a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+/* Add space between footer and main content */
+#footer {
+    margin-top: 60px;
+}

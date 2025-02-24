@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sports Zone</title>
+    <meta name="description" content="Contact Sports Zone for any inquiries or questions. We're here to help!">
+    <meta name="keywords" content="sports, contact, inquiry, support">
+    <meta name="author" content="Sports Zone">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1b1b1b;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #f39c12;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ccc;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        #header {
+            background-color: #2c3e50;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #nav ul li {
+            margin-left: 20px;
+        }
+
+        #nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        #nav ul li a:hover {
+            color: #1abc9c;
+        }
+
+        .nav-opener {
+            display: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact-section .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #f39c12;
+            align-self: flex-start;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        form input::placeholder,
+        form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: #f39c12;
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+        }
+
+        form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        form button {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        form button:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+        }
+
+        /* Response Message */
+        #responseMessage {
+            margin-top: 20px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        #responseMessage p {
+            margin: 0;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: #fff;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-opener {
+                display: block;
+            }
+
+            #nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #2c3e50;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                padding: 10px;
+            }
+
+            #nav ul li {
+                margin: 10px 0;
+            }
+
+            #nav ul.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div class="container">
+                <div class="logo"><a href="#"><img src="images/logo.png" alt="Sports Zone"></a></div>
+                <nav id="nav">
+                    <div class="opener-holder">
+                        <a href="#" class="nav-opener"><span></span></a>
+                    </div>
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Event.html">Events</a></li>
+                        <li><a href="Teams.html">Teams</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="contact-section">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Have questions? Get in touch with us! We're here to help.</p>
+
+                <form id="contact-form" action="process_form.php" method="POST">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                
+                    <button type="submit">Send Message</button>
+                </form>
+                
+
+                <div id="responseMessage"></div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Sports Zone | All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (name && email && message) {
+                document.getElementById("responseMessage").innerHTML = "<p style='color: #4CAF50;'>Thank you, " + name + ". Your message has been sent successfully!</p>";
+                document.getElementById("contact-form").reset();
+            } else {
+                document.getElementById("responseMessage").innerHTML = "<p style='color: #FF5733;'>Please fill in all the fields!</p>";
+            }
+        }
+
+        // JavaScript to handle the mobile menu toggle
+        document.querySelector('.nav-opener').addEventListener('click', function () {
+            const nav = document.querySelector('#nav ul');
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

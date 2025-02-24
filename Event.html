@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Sports Zone</title>
+    <meta name="description" content="Explore upcoming sports events at Sports Zone.">
+    <meta name="keywords" content="sports, events, cricket, basketball, table tennis, badminton, kabaddi">
+    <meta name="author" content="Sports Zone">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1b1b1b;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #f39c12;
+            margin-top: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        #header {
+            background-color: #2c3e50;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #nav ul li {
+            margin-left: 20px;
+        }
+
+        #nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        #nav ul li a:hover {
+            color: #1abc9c;
+        }
+
+        .nav-opener {
+            display: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            background-color: #2c3e50;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f39c12;
+            color: #000;
+            font-size: 1.2rem;
+        }
+
+        td {
+            background-color: #34495e;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        td img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        td img:hover {
+            transform: scale(1.1);
+        }
+
+        .event-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f39c12;
+        }
+
+        .event-details {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        /* Hover Effects */
+        tr:hover {
+            background-color: #3d566e;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: #fff;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-opener {
+                display: block;
+            }
+
+            #nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #2c3e50;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                padding: 10px;
+            }
+
+            #nav ul li {
+                margin: 10px 0;
+            }
+
+            #nav ul.active {
+                display: flex;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div class="container">
+                <div class="logo"><a href="#"><img src="images/logo.png" alt="Sports"></a></div>
+                <nav id="nav">
+                    <div class="opener-holder">
+                        <a href="#" class="nav-opener"><span></span></a>
+                    </div>
+                    <ul>
+                        <li class="active visible-sm visible-xs">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Event.html">Event</a></li>
+                        <li><a href="Teams.html">Teams</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <h1>Upcoming Events</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Image</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="event-name">Cricket</td>
+                        <td><img src="images/cricket.jpg" alt="Cricket"></td>
+                        <td>March 5, 2025</td>
+                        <td>Kits College</td>
+                    </tr>
+                    <tr>
+                        <td class="event-name">Basketball</td>
+                        <td><img src="images/basketball.jpg" alt="Basketball"></td>
+                        <td>March 12, 2025</td>
+                        <td>Kits College</td>
+                    </tr>
+                    <tr>
+                        <td class="event-name">Table Tennis</td>
+                        <td><img src="images/table.jpg" alt="Table Tennis"></td>
+                        <td>March 19, 2025</td>
+                        <td>Kits College</td>
+                    </tr>
+                    <tr>
+                        <td class="event-name">Badminton</td>
+                        <td><img src="images/bat.jpg" alt="Badminton"></td>
+                        <td>March 26, 2025</td>
+                        <td>Kits College</td>
+                    </tr>
+                    <tr>
+                        <td class="event-name">Kabaddi</td>
+                        <td><img src="images/kabbadi.jpg" alt="Kabaddi"></td>
+                        <td>March 26, 2025</td>
+                        <td>Kits College</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Sports Zone | All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript to handle the mobile menu toggle
+        document.querySelector('.nav-opener').addEventListener('click', function () {
+            const nav = document.querySelector('#nav ul');
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
